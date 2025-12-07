@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00e676;
+    }
+
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .image-gallery img {
+      width: 280px;
+      border-radius: 10px;
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    /* Glowing Button Styles */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .buttons button {
+      padding: 14px 30px;
+      font-size: 18px;
+      border: none;
+      color: white;
+      background: none;
+      position: relative;
+      cursor: pointer;
+      border-radius: 12px;
+      z-index: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .buttons button::before {
+      content: "";
+      background: linear-gradient(45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 600%;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      filter: blur(8px);
+      animation: glowing 20s linear infinite;
+      border-radius: 12px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    .buttons button::after {
+      content: "";
+      z-index: -2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      left: 0;
+      top: 0;
+      border-radius: 12px;
+    }
+
+    .buttons button:hover::before {
+      opacity: 1;
+    }
+
+    @keyframes glowing {
+      0% { background-position: 0 0; }
+      50% { background-position: 400% 0; }
+      100% { background-position: 0 0; }
+    }
+
+    .outlet {
+      display: none;
+      background-color: #1e1e1e;
+      padding: 30px;
+      margin: 0 auto;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .outlet h2 {
+      color: #29b6f6;
+    }
+
+    .outlet p {
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1f1f;
+      margin-top: 60px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .image-gallery img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Image World 🌍</h1>
+    <p>Explore your creativity through visuals</p>
+  </header>
+
+  <div class="container">
+    <div class="image-gallery"> 
+ <img src="C:\Users\vikas\Downloads\wall5.webp"/>
+ <img src="C:\Users\vikas\Downloads\wall4.webp"/>
+ <img src="C:\Users\vikas\Downloads\vikas.webp"/> 
+ <img src="C:\Users\vikas\Downloads\wall3.webp"/> 
+ <img src="C:\Users\vikas\Downloads\wall2.webp"/>
+ <img src="C:\Users\vikas\Downloads\wall1.webp"/>
+    </div>
+
+    <div class="buttons">
+      <button onclick="openOutlet()">Login</button>
+      <button onclick="showAbout()">About Us</button>
+      <button onclick="showContact()">Contact</button>
+    </div>
+
+    <div class="outlet" id="outlet">
+      <h2>Welcome! 🎉</h2>
+      <p>You’ve successfully logged in. This outlet is now unlocked. Here, we’ll soon launch your personalized dashboard filled with analytics, gallery stats, and more exciting features. 🚀</p>
+    </div>
+
+    <div class="outlet" id="about">
+      <h2>About Us</h2>
+      <p>We are a creative platform helping users build and showcase visual content beautifully. Our mission is to inspire creativity and bring design to life with the power of code and visuals!</p>
+    </div>
+
+    <div class="outlet" id="contact">
+      <h2>Contact Us</h2>
+<p>
+  Have questions? Reach out via Twitter: 
+  <a href="https://x.com/vikas_070v" target="_blank" rel="noopener noreferrer" style="color: #00ffc8; text-decoration: underline;">
+    x.com/vikas_070v
+  </a>
+</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Image World. All rights reserved.
+  </footer>
+
+  <script>
+    function hideAllOutlets() {
+      document.querySelectorAll(".outlet").forEach(div => div.style.display = "none");
+    }
+
+    function openOutlet() {
+      hideAllOutlets();
+      document.getElementById("outlet").style.display = "block";
+    }
+
+    function showAbout() {
+      hideAllOutlets();
+      document.getElementById("about").style.display = "block";
+    }
+
+    function showContact() {
+      hideAllOutlets();
+      document.getElementById("contact").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

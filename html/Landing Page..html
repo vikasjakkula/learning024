@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style> 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #444;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #00e5ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(145deg, #1e1e2f, #292947);
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.glow-btn {
+  background: #00e5ff;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00e5ff;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.glow-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00e5ff;
+}
+
+.features {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s;
+  border: 1px solid #555;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #444;
+}
+
+</style>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">FlexSite 🚀</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h2>Build Fast. Deploy Faster.</h2>
+      <p>Create beautiful websites with Flex CSS.</p>
+      <a href="#" class="glow-btn">Get Started</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>⚡ Fast</h3>
+      <p>Optimized for speed and performance.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🎨 Stylish</h3>
+      <p>Modern UI and CSS animations built-in.</p>
+    </div>
+    <div class="feature-card">
+      <h3>📱 Responsive</h3>
+      <p>Mobile-first design with flex layout.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 FlexSite. All rights reserved.</p>
+  </footer>
+</body>
+</html>

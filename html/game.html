@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the Number!</h1>
+    <p>I'm thinking of a number between 0 and 2. Can you guess it?</p>
+    
+    <div id="game-area">
+        <button onclick="makeGuess(0)">0</button>
+        <button onclick="makeGuess(1)">1</button>
+        <button onclick="makeGuess(2)">2</button>
+    </div>
+    
+    <div id="result"></div>
+    <div id="score">Score: <span id="correct">0</span> correct, <span id="total">0</span> total</div>
+    
+    <button onclick="newGame()" id="new-game-btn" style="display:none;">New Game</button>
+
+    <script>
+        let randomNum;
+        let correctGuesses = 0;
+        let totalGuesses = 0;
+        
+        function generateRandomNumber() {
+            // Based on your Java code, modified for 0-2 range
+            randomNum = Math.floor(Math.random() * 3);  // 0 to 2
+            console.log("Secret number:", randomNum); // For testing - remove in production
+        }
+        
+        function makeGuess(guess) {
+            totalGuesses++;
+            
+            const resultDiv = document.getElementById('result');
+            const gameArea = document.getElementById('game-area');
+            const newGameBtn = document.getElementById('new-game-btn');
+            
+            if (guess === randomNum) {
+                correctGuesses++;
+                resultDiv.innerHTML = "<h2>🎉 Correct! The number was " + randomNum + "</h2>";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerHTML = "<h2>❌ Wrong! The number was " + randomNum + ", you guessed " + guess + "</h2>";
+                resultDiv.style.color = "red";
+            }
+            
+            // Update score
+            document.getElementById('correct').textContent = correctGuesses;
+            document.getElementById('total').textContent = totalGuesses;
+            
+            // Hide guess buttons and show new game button
+            gameArea.style.display = 'none';
+            newGameBtn.style.display = 'inline-block';
+        }
+        
+        function newGame() {
+            generateRandomNumber();
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('game-area').style.display = 'block';
+            document.getElementById('new-game-btn').style.display = 'none';
+        }
+        
+        // Start the game
+        generateRandomNumber();
+    </script>
+</body>
+</html>

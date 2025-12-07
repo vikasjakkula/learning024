@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intex Page</title>
+</head>
+<body>
+    <div style="margin: 20px;">This box has margin.</div>
+    <div style="padding: 20px;">This text has padding.</div>
+    <div style="border: 2px solid black; width: 200px; height: 100px;">This box has a border.</div>
+    <div>
+        <p><strong>Welcome to the Intex page!</strong></p>
+    </div>
+
+    <div>
+        <button onclick="alert('Button clicked!')">Click Me!</button>
+    </div>
+
+    <div>
+        <center>
+            <img src="C:\Users\vikas\Pictures\Screenshots\Screenshot 2025-08-01 120832.png" alt="Placeholder Image" width="250">
+            <p>This is a placeholder image.</p>
+        </center>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Type something here...">
+    </div>
+
+    <div>
+        <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+    </div>
+
+<style>
+    .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #32a852;
+}
+
+.flex-container div {
+  background-color: #c9d1cb;
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 200px;
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 15px;
+}   
+
+</style>
+
+<div class="flex-container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+</body>
+</html>
+
+<div>
+
+</div>
