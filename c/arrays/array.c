@@ -537,18 +537,21 @@
 // }
 
 // 29. printing star for vowels in the string and space for consonants
-#include <stdio.h>
-int main() {
-    char str[100];
-    printf("Enter a string: ");
-    scanf("%s", str);
-    for(int i=0; i<strlen(str); i++) {
-        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ||
-           str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U') {
-            printf("*");
-        }
-        else {
-            printf(" ");
-        }
-    }
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main() {
+//     char str[100];
+//     printf("Enter a string: ");
+//     scanf("%s", str);
+//     for(int i=0; i<strlen(str); i++) {
+//         if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ||
+//            str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U') {
+//             printf("*");
+//         }
+//         else {
+//             printf(" ");
+//         }
+//     }
+//     return 0;
+// }
+
