@@ -2,40 +2,35 @@
 #define MAX 100
 
 int main() {
-    int arr[MAX], n, key, found = 0;
+    int arr[MAX], n, search, found = 0, first, last, middle;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    if (n <= 0 || n > MAX) {
-        printf("Invalid number of elements\n");
-        return 1;
-    }
-
-    printf("Enter the sorted elements:\n");
+    printf("Enter the %d elements:\n", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
     printf("Enter the key to search: ");
-    scanf("%d", &key);
+    scanf("%d", &search);
 
-    int low = 0, high = n - 1, mid;
+    low=0;
+    high=n-1;
 
-    while (low <= high) {
-        mid = low + (high - low) / 2;
-        if (arr[mid] == key) {
-            printf("Element found at position %d\n", mid + 1);
-            found = 1;
-            break;
-        } else if (arr[mid] < key) {
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
+    if(arr[middle]<search) {
+        first=middle+1;
+    }
+    else if(arr[middle]>search) {
+        last=middle-1;
+    }
+    else {
+        printf("Element found at position %d\n", middle + 1);
+        found = 1;
+        break;
+    }
+    if (found == 0) {
+        printf("Not found! %d isn't present in the list.\n", search);
     }
 
-    if (!found) {
-        printf("Element not found in the array\n");
-    }
     return 0;
 }
