@@ -16,6 +16,5 @@ int main() {
     printf("Value at ptr = %d\n", *ptr);
     printf("Value of a = %d\n", a);
     printf("Address of a = %p\n", &a);
-
     return 0;
 }
