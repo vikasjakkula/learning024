@@ -14,8 +14,8 @@ int main() {
     printf("Enter the key to search: ");
     scanf("%d", &search);
 
-    low=0;
-    high=n-1;
+    first=0;
+    last=n-1;
 
     if(arr[middle]<search) {
         first=middle+1;
