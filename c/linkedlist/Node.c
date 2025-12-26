@@ -1,15 +1,20 @@
-// linked list creation, traverse, insert, delete, search, sort, reverse, merge, split, concatenate, display
+// linked list creation, traverse, insert, delete, search, sort, reverse, merge, circular linkedlist, split, concatenate, display
+// Basics of linked list , traverse, insert, delete, reversing, circular.
 
+//basics of linkedlist
 #include <stdio.h>
+#include <stdlib.h>
 struct Node {
     int data;
-    struct Node *next;
+    struct Node* next;
 };
-void deleteNode(struct Node** head_ref, int key) {
-    struct Node *temp = *head_ref, *prev;
-    if (temp != NULL && temp->data == key) {
-    *head_ref = temp->next;
-    free(temp);
-    return;
-    }
+void insert(struct Node** head_ref, int temp) {
+    struct Node* temp = (struct Node*0)malloc(sizeof(struct Node))
+    temp->data=
+}
+
+int main(){
+
+
+    return 0;
 }
