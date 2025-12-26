@@ -1,46 +1,98 @@
-#include<stdio.h>
-#include<string.h>
-void main()
-{
-char a[10],b[10];
-int ch,len;
-printf("enter str1 ");
-scanf("%s",a);
-printf("enter str2 ");
-scanf("%s",b);
-while(1)
-{
-printf("\n choose ur option");
-printf("\n 1.length\n 2.compare\n 3.copy\n 4.concat\n");
-printf("enter ur choice: ");
-scanf("%d",&ch);
-switch(ch)
-{
-case 1: len=strlen(a);
-printf("length is %d\n",len);
-break;
-case 2:if(strcmp(a,b)==0)
-{
-printf("both strings are equal\n");
-}
-else
-if(strcmp(a,b)>0)
-printf("%s is greater than %s\n",a,b);
-else
-printf("%s is greater than %s\n",b,a);
-break;
-case 3: printf(" str1 %s\n",a);
-printf("str2 %s\n",b);
-strcpy(a,b);
-printf("after copy strings are\n");
-printf(" str1 %s\n",a);
-printf("str2 %s\n",b);
-break;
-case 4:printf(" str1 %s\n",a);
-printf("str2 %s\n",b);
-strcat(a,b);
-printf(" str1 %s\n",a);
-break;
-}
-}
-}
+//Menu-driven using arrow keys
+// #include<stdio.h>
+// #include<conio.h>
+// #include<windows.h>
+
+// #define BLACK 0
+// #define RED 4
+// #define WHITE 15
+
+// void gotoxy(int x, int y) {
+//     COORD coord;
+//     coord.X = x - 1;
+//     coord.Y = y - 1;
+//     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+// }
+
+// void clrscr() {
+//     system("cls");
+// }
+
+// void setcolor(int text, int bg) {
+//     WORD wColor = (bg << 4) | (text & 0x0F);
+//     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), wColor);
+// }
+
+// void disp(int n)
+// {
+// int i=0;
+// char menu[4][20]={"PRINT","1","2","EXIT"};
+
+// clrscr();
+// gotoxy(1,1);
+// for(i=0;i<4;i++){
+
+//     if(i==n){
+//     setcolor(RED, WHITE);
+//     gotoxy(1,i+1);
+//     printf("%s\n",menu[i]);
+//     setcolor(WHITE, BLACK);
+//     }else{
+//     gotoxy(1,i+1);
+//     setcolor(WHITE, BLACK);
+//     printf("%s\n",menu[i]);
+//     }
+//         }
+
+// }
+
+// int main()
+// {
+//  int i=2;
+//  int ch;
+//  disp(1);
+//  gotoxy(1,i);
+
+//  while(1)
+//  {
+//     ch = _getch();
+//     if(ch == 0 || ch == 0xE0) {
+//         ch = _getch();
+//         if(ch == 80){ // Down
+//         if(i<=3){
+//             i=i+1;
+//             disp(i-1);
+//             gotoxy(1,i);
+//             }else{}
+//     }else if(ch == 72){ // Up
+//             if(i==2){}else{
+//         i=i-1;
+//             disp(i-1);
+//             gotoxy(1,i);
+//             }
+//     }else if(ch == 75){ // Left Arrow
+//         break;
+//     }else{
+//         disp(i-1);
+//         gotoxy(1,i);
+//     }
+//     }else if(ch==13){ // Enter
+//         clrscr();
+//             if(i==2){
+//             printf("ONE");
+//             }else if(i==3){
+//             printf("TWO");
+//             }else{
+//             printf("Thank You");
+//             _getch();
+//             return 0;
+//             }
+//     }else{
+//     disp(i-1);
+//     gotoxy(1,i);
+//     }
+//  }
+
+// return 0;
+// }
+   
