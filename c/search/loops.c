@@ -53,8 +53,3 @@
 //     gcd(a, b);
 //     return 0;
 // }
-
-#include <stdio.h>
-int main() {
-    
-}
