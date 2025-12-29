@@ -1,0 +1,18 @@
+# Web Scraping Mastery - Required Packages
+# Install with: pip install -r requirements.txt
+
+# HTTP requests library
+requests>=2.31.0
+
+# HTML parsing library
+beautifulsoup4>=4.12.0
+
+# XML/HTML parser (faster than default)
+lxml>=4.9.0
+
+# For working with CSV files (included in Python, but good to note)
+# csv - built-in module
+
+# For working with JSON files (included in Python, but good to note)
+# json - built-in module
+

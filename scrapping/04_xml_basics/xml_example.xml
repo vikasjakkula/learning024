@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Sample XML file for learning web scraping
+    This represents a simple library catalog
+-->
+<library>
+    <book id="1" category="fiction" available="true">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price currency="USD">10.99</price>
+        <description>A classic American novel about the Jazz Age.</description>
+        <isbn>978-0-7432-7356-5</isbn>
+    </book>
+    
+    <book id="2" category="non-fiction" available="true">
+        <title>Python Programming: A Complete Guide</title>
+        <author>John Doe</author>
+        <year>2023</year>
+        <price currency="USD">29.99</price>
+        <description>Learn Python from scratch with practical examples.</description>
+        <isbn>978-0-1234-5678-9</isbn>
+    </book>
+    
+    <book id="3" category="fiction" available="false">
+        <title>1984</title>
+        <author>George Orwell</author>
+        <year>1949</year>
+        <price currency="USD">12.99</price>
+        <description>A dystopian novel about totalitarianism.</description>
+        <isbn>978-0-452-28423-4</isbn>
+    </book>
+    
+    <book id="4" category="science" available="true">
+        <title>Cosmos</title>
+        <author>Carl Sagan</author>
+        <year>1980</year>
+        <price currency="USD">15.99</price>
+        <description>An exploration of the universe and our place in it.</description>
+        <isbn>978-0-345-33135-9</isbn>
+    </book>
+</library>
+
